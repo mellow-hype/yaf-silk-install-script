@@ -6,6 +6,12 @@ SITE_CONF="/data/silk.conf"
 LOCAL_NET=$2
 LOCAL_NET_PH="LOCAL_NETWORK_ADDR"
 
+if [ "$#" -lt 2 ]; then
+    echo "usage: ./silk-yaf.sh <internal-ip-block> \nThe internal IP block should be the network address of the internal network to be monitored (ex. 192.168.1.0/24)\n"
+else if [ "$#" -gt 2 ]; then
+    echo "usage: ./silk-yaf.sh <internal-ip-block> \nThe internal IP block should be the network address of the internal network to be monitored (ex. 192.168.1.0/24)\n"
+fi
+
 ### YAF
 echo "[-] Installing YaF"
 sudo apt-get -y install wget build-essential pkg-config libfixbuf3-dev libpcap0.8-dev python-dev glib2.0
