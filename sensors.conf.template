@@ -1,0 +1,11 @@
+probe S0 ipfix
+ listen-on-port 18001 # you may need to allow this port through the firewall so that yaf can talk to it
+ protocol tcp
+ listen-as-host 127.0.0.1
+end probe
+
+sensor S0
+ ipfix-probes S0
+ internal-ipblocks LOCAL_NETWORK_ADDR
+ external-ipblocks remainder
+end sensor
