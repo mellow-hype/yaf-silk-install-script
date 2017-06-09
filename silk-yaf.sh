@@ -5,10 +5,12 @@ LOCAL_NET=$2
 LOCAL_NET_PH="LOCAL_NETWORK_ADDR"
 
 if [ "$#" -lt 2 ]; then
-    echo "usage: ./silk-yaf.sh <internal-ip-block> \nThe internal IP block should be the network address of the internal network to be monitored (ex. 192.168.1.0/24)\n"
+    echo -e "usage: ./silk-yaf.sh <internal-ip-block>\n"
+    echo -e "The internal IP block should be the network address of the internal network (ex. 192.168.1.0/24)\n"
     exit
 elif [ "$#" -gt 2 ]; then
-    echo "usage: ./silk-yaf.sh <internal-ip-block> \nThe internal IP block should be the network address of the internal network to be monitored (ex. 192.168.1.0/24)\n"
+    echo -e "usage: ./silk-yaf.sh <internal-ip-block>\n"
+    echo -e "The internal IP block should be the network address of the internal network (ex. 192.168.1.0/24)\n"
     exit
 fi
 
