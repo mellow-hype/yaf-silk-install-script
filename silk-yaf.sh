@@ -44,9 +44,9 @@ sudo mv silk.conf /etc/ld.so.conf.d/silk.conf
 sudo ldconfig
 cd $BASEDIR
 
-cp sensors.conf.template sensors.conf
-sed -i "s|$LOCAL_NET_PH|$LOCAL_NET|" sensors.conf
-sudo mv sensors.conf /data
+cp sensor.conf.template sensor.conf
+sed -i "s|$LOCAL_NET_PH|$LOCAL_NET|" sensor.conf
+sudo mv sensor.conf /data
 
 sudo mv rwflowpack.conf.template /usr/local/etc/rwflowpack.conf
 sudo chmod +x /usr/local/etc/rwflowpack.conf
