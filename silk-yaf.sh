@@ -1,14 +1,10 @@
 #!/usr/bin/env bash
 # Download and install Silk+Yaf for a standalone installation
 BASEDIR=$PWD
-LOCAL_NET=$2
+LOCAL_NET=$1
 LOCAL_NET_PH="LOCAL_NETWORK_ADDR"
 
-if [ "$#" -lt 2 ]; then
-    echo -e "usage: ./silk-yaf.sh <internal-ip-block>\n"
-    echo -e "The internal IP block should be the network address of the internal network (ex. 192.168.1.0/24)\n"
-    exit
-elif [ "$#" -gt 2 ]; then
+if [ "$#" -ne 1 ]; then
     echo -e "usage: ./silk-yaf.sh <internal-ip-block>\n"
     echo -e "The internal IP block should be the network address of the internal network (ex. 192.168.1.0/24)\n"
     exit
