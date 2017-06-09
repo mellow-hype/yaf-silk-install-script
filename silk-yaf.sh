@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 # Download and install Silk+Yaf for a standalone installation
 BASEDIR=$PWD
-SENSOR_CONF="/data/sensors.conf"
-SITE_CONF="/data/silk.conf"
 LOCAL_NET=$2
 LOCAL_NET_PH="LOCAL_NETWORK_ADDR"
 
