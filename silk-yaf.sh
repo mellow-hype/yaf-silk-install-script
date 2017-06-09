@@ -8,8 +8,10 @@ LOCAL_NET_PH="LOCAL_NETWORK_ADDR"
 
 if [ "$#" -lt 2 ]; then
     echo "usage: ./silk-yaf.sh <internal-ip-block> \nThe internal IP block should be the network address of the internal network to be monitored (ex. 192.168.1.0/24)\n"
-else if [ "$#" -gt 2 ]; then
+    exit
+elif [ "$#" -gt 2 ]; then
     echo "usage: ./silk-yaf.sh <internal-ip-block> \nThe internal IP block should be the network address of the internal network to be monitored (ex. 192.168.1.0/24)\n"
+    exit
 fi
 
 ### YAF
@@ -56,4 +58,3 @@ sudo chmod +x /usr/local/etc/rwflowpack.conf
 sudo cp /usr/local/share/silk/etc/init.d/rwflowpack /etc/init.d
 sudo sudo update-rc.d rwflowpack start 20 3 4 5 .
 sudo service rwflowpack start
-
