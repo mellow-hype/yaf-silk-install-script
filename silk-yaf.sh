@@ -51,6 +51,6 @@ sudo mv sensor.conf /data
 sudo mv rwflowpack.conf.template /usr/local/etc/rwflowpack.conf
 sudo chmod +x /usr/local/etc/rwflowpack.conf
 
-sudo cp /usr/local/share/silk/etc/init.d/rwflowpack /etc/init.d
-sudo sudo update-rc.d rwflowpack start 20 3 4 5 .
-sudo service rwflowpack start
+sudo cp /usr/local/share/silk/etc/init.d/rwflowpack /etc/init.d/
+sudo update-rc.d rwflowpack start 20 3 4 5 .
+
